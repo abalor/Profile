@@ -1,0 +1,170 @@
+@page
+@model IndexModel
+
+<div id="top"></div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow"><span class="chip-dot" aria-hidden="true"></span>Full-stack developer, Uganda</p>
+            <h1>Wagisha<br>Emmanuel</h1>
+            <p class="hero-lede">
+                I build web systems for events, SACCOs and fintech: ticketing, NFC access cards,
+                payment reconciliation, and the portals that keep them running.
+            </p>
+            <div class="ticket-cut" aria-hidden="true"></div>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#systems">See my work</a>
+                <a class="btn btn-ghost" href="https://github.com/abalor" target="_blank" rel="noopener">GitHub ↗</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/wagisha-emmanuel-8074352b6/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+        </div>
+        <div class="hero-card" aria-hidden="false">
+            <div class="id-card">
+                <div class="id-card-chip"></div>
+                <img src="~/images/wagisha.jpeg" alt="Portrait of Wagisha Emmanuel" />
+                <div class="id-card-strip">
+                    <span>ACCESS · ALL AREAS</span>
+                    <span>DEV-01</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BACKGROUND -->
+<section class="section" id="about">
+    <div class="section-inner about-grid">
+        <h2><span class="section-index">01</span>Background</h2>
+        <div class="about-copy">
+            <p>
+                I'm a Computer Science graduate from Makerere University, and I've been writing
+                production code for long enough to have opinions about it. IT has been my thing
+                since long before it was my job title:
+            </p>
+            <p>
+                Most of what I've shipped sits at the intersection of payments, identity and
+                access: mobile-money ticketing, NFC guest and SACCO cards, and the admin portals
+                that keep everything reconciled. I have worked across fintech and agricultural-sector
+                products in Uganda, usually owning a build from the database schema through to
+                how it's actually used in the field.
+            </p>
+            <p>
+                Alongside development, I also do digital marketing and content work, so I tend to
+                think about a product's positioning at the same time as its architecture.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- STACK -->
+<section class="section section-alt" id="stack">
+    <div class="section-inner">
+        <h2><span class="section-index">02</span>Stack</h2>
+        <ul class="stack-grid">
+            <li>ASP.NET Core / Razor Pages</li>
+            <li>Angular</li>
+            <li>React.js</li>
+            <li>Ionic / Capacitor</li>
+            <li>Django</li>
+            <li>SQL Server</li>
+            <li>Linux / Ubuntu</li>
+            <li>nginx</li>
+            <li>Cloudflare</li>
+            <li>REST API Integration</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SYSTEMS -->
+<section class="section" id="systems">
+    <div class="section-inner">
+        <h2><span class="section-index">03</span>Systems</h2>
+        <p class="section-lede">A few examples of systems I've built. Most solve some version of the same problem: getting someone in, paid, or tracked, reliably.</p>
+
+        <div class="card-grid">
+            @foreach (var p in Model.Systems)
+            {
+                <article class="access-card">
+                    <div class="access-card-top">
+                        <span class="access-card-no">№ @p.Number</span>
+                        @if (!string.IsNullOrEmpty(p.Logo))
+                        {
+                            <img class="access-card-logo" src="~/images/@p.Logo" alt="@p.Name logo" />
+                        }
+                    </div>
+                    <h3>@p.Name</h3>
+                    <p>@p.Summary</p>
+                    <div class="access-card-tags">
+                        @foreach (var tag in p.Tags)
+                        {
+                            <span>@tag</span>
+                        }
+                    </div>
+                    @if (!string.IsNullOrEmpty(p.Url))
+                    {
+                        <a class="access-card-link" href="@p.Url" target="_blank" rel="noopener">Visit site ↗</a>
+                    }
+                    <span class="access-card-notch" aria-hidden="true"></span>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- WEBSITES -->
+<section class="section section-alt" id="websites">
+    <div class="section-inner">
+        <h2><span class="section-index">04</span>Websites</h2>
+        <p class="section-lede">A few examples of client and product websites I've designed and built end to end.</p>
+
+        <ul class="website-list">
+            @foreach (var w in Model.Websites)
+            {
+                <li>
+                    <span class="website-name">@w.Name</span>
+                    <span class="website-client">@w.Client</span>
+                    @if (!string.IsNullOrEmpty(w.Url))
+                    {
+                        <a class="website-link" href="@w.Url" target="_blank" rel="noopener">@w.Url.Replace("https://", "").TrimEnd('/') ↗</a>
+                    }
+                    else
+                    {
+                        <span class="website-status">@w.Status</span>
+                    }
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="section" id="publications">
+    <div class="section-inner">
+        <h2><span class="section-index">05</span>Publications</h2>
+        <ul class="pub-list">
+            @foreach (var pub in Model.Publications)
+            {
+                <li>
+                    <span class="pub-type">@pub.Type</span>
+                    <a href="@pub.Url" target="_blank" rel="noopener">@pub.Title ↗</a>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-contact" id="contact">
+    <div class="section-inner">
+        <h2><span class="section-index">06</span>Get in touch</h2>
+        <p class="section-lede">Open to full-stack roles and freelance builds. Reach me through any of these.</p>
+        <ul class="contact-list">
+            <li><span class="contact-label">Phone</span><a href="tel:+256762815104">+256 762 815 104</a></li>
+            <li><span class="contact-label">Email</span><a href="mailito:emmanuelwagisha@gmail.com">emmanuelwagisha@gmail.com</a></li>
+            <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/wagisha-emmanuel-8074352b6/" target="_blank" rel="noopener">linkedin.com/in/wagisha-emmanuel-8074352b6 ↗</a></li>
+            <li><span class="contact-label">GitHub</span><a href="https://github.com/abalor" target="_blank" rel="noopener">github.com/abalor ↗</a></li>
+        </ul>
+    </div>
+</section>

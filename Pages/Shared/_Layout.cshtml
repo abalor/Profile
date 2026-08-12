@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wagisha Emmanuel, Full-Stack Developer</title>
+    <meta name="description" content="Wagisha Emmanuel, full-stack developer building fintech, event-access and agri-tech systems in Uganda." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a href="#top" class="nav-mark" aria-label="Wagisha Emmanuel, home">
+                <span class="mark-chip" aria-hidden="true"></span>
+                WE
+            </a>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stack">Stack</a></li>
+                    <li><a href="#systems">Systems</a></li>
+                    <li><a href="#websites">Websites</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>© @DateTime.Now.Year Wagisha Emmanuel.</span>
+            <a href="https://github.com/abalor" target="_blank" rel="noopener">github.com/abalor</a>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
