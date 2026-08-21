@@ -28,3 +28,4 @@ E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Debug\net8.0\refint\Portfolio
 E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Debug\net8.0\PortfolioSite.pdb
 E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Debug\net8.0\PortfolioSite.genruntimeconfig.cache
 E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Debug\net8.0\ref\PortfolioSite.dll
+E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Debug\net8.0\PortfolioSite.sourcelink.json

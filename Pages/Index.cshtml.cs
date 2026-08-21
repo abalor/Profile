@@ -60,7 +60,8 @@ public class IndexModel : PageModel
         {
             Number = "05", Name = "GIS Web Mapping",
             Summary = "Land-surveying and GIS platform built for churches across Greater Masaka. Converts field survey data, uploads and previews shapefiles, and displays everything on an interactive map for analysis.",
-            Tags = new[] { "GIS", "Shapefiles", "Web Mapping" }
+            Tags = new[] { "GIS", "Shapefiles", "Web Mapping" },
+             Url = "https://cbd.utrax.co.ug/"
         },
         new SystemProject
         {
@@ -96,8 +97,16 @@ public class IndexModel : PageModel
         new SystemProject
         {
             Number = "11", Name = "OBUMU",
-            Summary = "Pledge and collection platform in the spirit of GoFundMe. Lets users pledge to an event and track savings, with a companion mobile app.",
-            Tags = new[] { "ASP.NET Core", "React.js", "Ionic" }
+            Summary = "Pledge and collection platform in the spirit of GoFundMe. Lets users pledge to an event and track savings, with a companion mobile app built with Ionic.",
+            Tags = new[] { "ASP.NET Core", "Ionic", "Angular" },
+            Url = "https://play.google.com/store/apps/details?id=com.pewosa"
+        },
+        new SystemProject
+        {
+            Number = "12", Name = "Pewosa TF",
+            Summary = "Trade fair management platform connecting exhibitors and organizers with participating SACCO savings groups, keeping fair proceeds and group contributions tracked in one place.",
+            Tags = new[] { "Ionic", "Trade Fair Ops", "SACCO" },
+            Url = "https://play.google.com/store/apps/details?id=com.app.obumu"
         },
     };
 
@@ -107,7 +116,7 @@ public class IndexModel : PageModel
         new WebsiteProject { Name = "YoPas", Client = "YoPas", Url = "https://yopas.co.ug/" },
         new WebsiteProject { Name = "Utrax", Client = "Utrax Agency Ltd", Url = "https://utrax.co.ug/" },
         new WebsiteProject { Name = "SharkPay", Client = "SharkPay Fintech", Url = "https://sharkpay.co.ug/Home" },
-        new WebsiteProject { Name = "Ezer Consult", Client = "Ezer Consult", Status = "In progress" },
+        new WebsiteProject { Name = "Ezer Consult", Client = "Ezer Consult", Url = "https://ezer-consult.com/" },
     };
 
     public List<Publication> Publications { get; } = new()

@@ -1,0 +1,5 @@
+E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Release\net8.0\PubTmp\Out\PortfolioSite.exe
+E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Release\net8.0\PubTmp\Out\PortfolioSite.dll
+E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Release\net8.0\PubTmp\Out\PortfolioSite.deps.json
+E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Release\net8.0\PubTmp\Out\PortfolioSite.runtimeconfig.json
+E:\vian d\Projects\PortfolioSite\PortfolioSite\obj\Release\net8.0\PubTmp\Out\PortfolioSite.pdb

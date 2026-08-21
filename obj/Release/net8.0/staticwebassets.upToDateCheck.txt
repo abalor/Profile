@@ -1,0 +1,7 @@
+wwwroot\css\site.css
+wwwroot\images\etag-logo.png
+wwwroot\images\pewosa-logo.jpg
+wwwroot\images\sharkpay-logo.png
+wwwroot\images\wagisha.jpeg
+wwwroot\images\yopas-logo.png
+wwwroot\js\site.js
